@@ -67,7 +67,7 @@ jobs:
           KEYSTORE_PASSWORD: ${{ secrets.KEY_STORE_PASSWORD }}
           KEY_ALIAS: ${{ secrets.ALIAS }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
-        run: ./build_and_sign_apk.sh --release --full
+        run: ./build_and_sign_apk.sh --debug --full
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
@@ -127,7 +127,7 @@ jobs:
           KEYSTORE_PASSWORD: ${{ secrets.KEY_STORE_PASSWORD }}
           KEY_ALIAS: ${{ secrets.ALIAS }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
-        run: ./build_and_sign_apk.sh --release --full --vivo
+        run: ./build_and_sign_apk.sh --debug --full --vivo
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
@@ -169,7 +169,7 @@ jobs:
           KEYSTORE_PASSWORD: ${{ secrets.KEY_STORE_PASSWORD }}
           KEY_ALIAS: ${{ secrets.ALIAS }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
-        run: ./build_and_sign_apk.sh --release --foss
+        run: ./build_and_sign_apk.sh --debug --foss
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
