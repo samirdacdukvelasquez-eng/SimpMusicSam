@@ -24,11 +24,10 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build APK Debug
-        run: ./gradlew assembleDebug
+        run: ./gradlew :composeApp:assembleDebug -p composeApp --stacktrace
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: SimpMusic-Debug-APK
-          path: |
-            **/build/outputs/apk/debug/*.apk
+          name: SimpMusic-Custom-Debug
+          path: composeApp/build/outputs/apk/debug/*.apk
